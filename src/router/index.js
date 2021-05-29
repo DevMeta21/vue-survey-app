@@ -6,6 +6,7 @@ import TestQuestion from '@/components/TestQuestion'
 import TestWait from '@/components/TestWait'
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -25,6 +26,7 @@ const routes = [
     name: 'TestWait',
     component: TestWait,
     props: true
+
   },
   {
     path: '/about',
