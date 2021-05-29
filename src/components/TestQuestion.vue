@@ -1,5 +1,7 @@
 <template>
 <v-app>
+  <div class="root2">
+  <main class="main">
   <div class="MBTI-2">
     <!-- <div class="col-md-5 col-md-offset-0"> -->
         <!-- <figure>
@@ -44,6 +46,8 @@
       {{productPage+1}}/10
     </div>
     
+  </div>
+  </main>
   </div>
 </v-app>
 
@@ -111,11 +115,14 @@ export default {
 
 
 <style lang="scss">
-header h1{
-    padding: 10px 20px;
-}
-body {
-    max-width: 970px !important;
+.root2 {
+    display: flex;
+    // padding: 10px 10px 10px 10px;
+    position: relative;
+    // max-width: 600px;
+    padding: 0;
+    margin: 0;
+    background-color: #252525;
 }
 .maskWrap {
     position: relative;
@@ -128,7 +135,6 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 .titleWrap {
     width: 176px;
     height: 176px;
@@ -149,17 +155,15 @@ body {
 .MBTI-2 {
   // width: 375px;
   // height: 812px;
-  padding: 121px 30px 92px 40px;
+  padding: 121px 30px;
+  max-width: 600px; 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  align-items: center;
   background-color: #252525;
 }
-
-.layer {
-  /* width: 254.7px;
-  height: 241px; */
-  margin: 0 32.3px 18px 40px;
-  object-fit: contain;
-}
-
 .question-button {
   width: 314px;
   height: 60px;
@@ -173,7 +177,7 @@ body {
   width: 275px;
   height: 24px;
   margin: 1px 0 0;
-  font-family: SpoqaHanSans;
+  font-family: CookieRun-Regular;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -188,7 +192,7 @@ body {
   height: 31px;
   margin: 0 277px 5px 4px;
   // background-color: #ffdc00;
-  font-family: SpoqaHanSansNeo;
+  font-family: CookieRun-Regular;
   font-size: 19px;
   font-weight: normal;
   font-stretch: normal;
@@ -203,7 +207,7 @@ body {
   height: 106px;
   margin: 5px 0 0;
   // background-color: #d8d8d8;
-  font-family: SpoqaHanSans;
+  font-family: CookieRun-Regular;
   font-size: 28px;
   font-weight: 300;
   font-stretch: normal;
@@ -218,7 +222,7 @@ body {
   // height: 32px;
   // margin: 6px 140.5px 0 24.5px;
   opacity: 0.5;
-  font-family: SpoqaHanSans;
+  font-family: CookieRun-Regular;
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -236,9 +240,5 @@ body {
   font-style: normal;
 }
 
-@media (min-width: 1200px) {
-    .container{
-        max-width: 970px;
-    }
-}
+
 </style>

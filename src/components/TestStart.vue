@@ -1,4 +1,6 @@
 <template>
+<div class="root">
+  <main class="main">
   <div class="MBTI-1">
     <div class="col-md-5 col-md-offset-0">
         <figure>
@@ -13,6 +15,8 @@
      <router-view/> -->
     </div>
   </div>
+  </main>
+</div>
 </template>
 
 <script>
@@ -22,31 +26,61 @@ export default {
 </script>
 
 <style lang="scss">
-header h1{
-    padding: 10px 20px;
-}
 body {
-    max-width: 970px !important;
+  min-width: 320px;
+  overflow-y: scroll;
+  // padding: 10px 10px 10px 10px;
+  margin: 0;
+  display: block;
+  background-color: #ffdc00;
+}
+.root {
+    display: flex;
+    // padding: 10px 10px 10px 10px;
+    position: relative;
+    // max-width: 600px;
+    padding: 0;
+    margin: 0;
+    background-color: #ffdc00;
+}
+.main {
+  align-items: center;
+  min-height: 100vh;
+  min-height: calc(100vh - 50px);
+  max-width: 640px;
+  margin: 0 auto;
+  // padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .MBTI-1 {
-  /* width: 375px; */
-  /* height: 812px; */
-  padding: 80px 28px 169px 20px;
+  padding: 90px 0 0 0;
+  max-width: 600px; 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  align-items: center;
   background-color: #ffdc00;
 }
 
 .layer {
   /* width: 254.7px;
   height: 241px; */
-  margin: 0 32.3px 18px 40px;
-  object-fit: contain;
+  // margin: 0 32.3px 18px 40px;
+  // object-fit: contain;
+  display: block;
+  // width: 100%;
+  max-width: 700px;
+  border: 0;
+  vertical-align: top;
 }
 
 .start-button {
   /* width: 327px; */
   /* height: 54px; */
-  margin: 106px 0 26px;
+  // margin: 106px 0 26px;
   padding: 18px 107px 19px 108px;
   border-radius: 6px;
   background-color: #1a1a1a;
@@ -103,9 +137,5 @@ body {
   font-style: normal;
 }
 
-@media (min-width: 1200px) {
-    .container{
-        max-width: 970px;
-    }
-}
+
 </style>
