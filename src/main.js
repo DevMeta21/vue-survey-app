@@ -5,13 +5,16 @@ import store from './store'
 import router from './router'
 import VueAxios from 'vue-axios'
 import axios from 'axios';
-import firebase from 'firebase/app'
+//import firebase from 'firebase/app'
 import 'firebase/firestore'
-import firebaseConfig from '../firebaseConfig'
+//import firebaseConfig from '../firebaseConfig'
 
 Vue.use(VueAxios, axios)
 
 window.axios = require('axios');
+
+export const eventBus = new Vue();
+
 new Vue({
   vuetify,
   store,
@@ -21,12 +24,12 @@ new Vue({
 
 
 // Initialize Firebase
-var db = firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
+// var db = firebase.initializeApp(firebaseConfig);
+// // firebase.analytics();
 
-db.firestore().collection("test").add(
-  {
-    test: [1,0]
-  }
-).then(r => console.log(r)).catch(e => console.log(e));
+// db.firestore().collection("test").add(
+//   {
+//     test: [1,0]
+//   }
+// ).then(r => console.log(r)).catch(e => console.log(e));
 

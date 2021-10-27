@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import TestStart from '@/components/TestStart'
 import TestQuestion from '@/components/TestQuestion'
 import TestWait from '@/components/TestWait'
+import TestResult from '@/components/TestResult'
 
 
 
@@ -25,6 +26,13 @@ const routes = [
     path: '/wait',
     name: 'TestWait',
     component: TestWait,
+    props: true
+
+  },
+  {
+    path: '/result',
+    name: 'TestResult',
+    component: TestResult,
     props: true
 
   },

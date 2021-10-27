@@ -1,31 +1,184 @@
 {
-  "products":[
-    {
-      "id": 1001,
-      "q":"Q1",
-      "title": "아침에 눈을 뜬 당신. 맞은 편 벽에 걸린 액자가 눈에 들어온다. 액자안에는?",
-      "answer1": "늘 봐도 곱씹게 되는 유명인사의 멋진 글귀",
-      "answer2": "여행을 위해 큰맘 먹고 사놓은 아프리카 지도",
-      "answer1_score": 0,
-      "answer2_score": 1
-    },
-    {
-      "id": 1002,
-      "q":"Q2",
-      "title": "성향분석질문2",
-      "answer1": "늘 봐도 곱씹게 되는 멋진 글귀",
-      "answer2": "여행을 위해 큰맘 먹고 사놓은 대한민국 지도",
-      "answer1_score": 0,
-      "answer2_score": 1
-    },
-    {
-      "id": 1003,
-      "q":"Q3",
-      "title": "성향분석질문3",
-      "answer1": "늘 봐도 곱씹게 되는 멋진 글귀",
-      "answer2": "여행을 위해 큰맘 먹고 사놓은 대한민국 지도",
-      "answer1_score": 0,
-      "answer2_score": 1
-    }
-  ]
+    "products": [
+        {
+            "id": 2001,
+            "q": "Q1",
+            "title": "친구들만 있을 줄 알고 간 모임에 모르는 사람이 꽤 있다",
+            "answer1": "누가 말 좀 해주지…",
+            "answer2": "오, 사람이 많아야 재미있지",
+            "answer1_score": "soc1B",
+            "answer2_score": "soc1A"
+        },
+        {
+            "id": 2002,
+            "q": "Q2",
+            "title": "알바생이 5명인 곳에 처음 출근했다",
+            "answer1": "멋쩍은 웃음을 지으며, 분위기를 살핀다",
+            "answer2": "다른 알바생들에게 질문을 던지며 적응한다",
+            "answer1_score": "soc2B",
+            "answer2_score": "soc2A"
+        },
+        {
+            "id": 2003,
+            "q": "Q3",
+            "title": "내가 더 싫어하는 것은?",
+            "answer1": "피곤할 때 여럿이 어울려 노는 것",
+            "answer2": "놀고 싶을 때 같이 놀 사람이 없는 것",
+            "answer1_score": "soc8B",
+            "answer2_score": "soc8A"
+        },
+        {
+            "id": 2004,
+            "q": "Q4",
+            "title": "나랑 더 비슷한 타입은?",
+            "answer1": "나른한 페르시안 (고양이)",
+            "answer2": "활동적인 비글 (강아지)",
+            "answer1_score": "soc13B",
+            "answer2_score": "soc13A"
+        },
+        {
+            "id": 2005,
+            "q": "Q5",
+            "title": "모임에 나갔을 때 나는 주로?",
+            "answer1": "친구의 이야기를 주로 들어주는 편이다",
+            "answer2": "이야기를 이끌어 나가는 편이다",
+            "answer1_score": "soc15B",
+            "answer2_score": "soc15A"
+        },
+        {
+            "id": 2006,
+            "q": "Q6",
+            "title": "소개팅 제안을 받았다",
+            "answer1": "혹시 잘못되어서 주선자와 관계가 잘못될까 신경쓰인다",
+            "answer2": "새로운 애인이 생길 것이 기대된다",
+            "answer1_score": "soc16B",
+            "answer2_score": "soc16A"
+        },
+        {
+            "id": 2007,
+            "q": "Q7",
+            "title": "드라마나 영화에서 주인공이 울고 있다",
+            "answer1": "눈물 포인트일 뿐, 울지는 않는다",
+            "answer2": "나도 눈물이 나온다",
+            "answer1_score": "emo2F",
+            "answer2_score": "emo2E"
+        },
+        {
+            "id": 2008,
+            "q": "Q8",
+            "title": "여행을 가는데 비행기가 난기류로 흔들린다",
+            "answer1": "좀 흔들려도 여행가는게 신나서 상관 없다",
+            "answer2": "사고가 날까봐 안전벨트를 더 꽉 조인다",
+            "answer1_score": "emo4F",
+            "answer2_score": "emo4E"
+        },
+        {
+            "id": 2009,
+            "q": "Q9",
+            "title": "공포에 질려 어쩔 줄 몰라 아무것도 하지 못하는 사람을 보았다",
+            "answer1": "나는 안그럴꺼 같은데 답답하다",
+            "answer2": "공감이 되서 나를 투영하게 된다",
+            "answer1_score": "emo5F",
+            "answer2_score": "emo5E"
+        },
+        {
+            "id": 2010,
+            "q": "Q10",
+            "title": "중요한 결과 발표를 기다리고 있다",
+            "answer1": "생각이 나긴 하지만 다른 일에 영향 줄 정도는 아니다",
+            "answer2": "자꾸 신경이 쓰여 다른 일이 손에 잡히지 않는다",
+            "answer1_score": "emo6F",
+            "answer2_score": "emo6E"
+        },
+        {
+            "id": 2011,
+            "q": "Q11",
+            "title": "아프리카에서 질병으로 고통 받는 아기들의 영상이 나오고 있다",
+            "answer1": "감정적으로 크게 동요하지는 않는다",
+            "answer2": "안타깝고 도와주고 싶다",
+            "answer1_score": "emo10F",
+            "answer2_score": "emo10E"
+        },
+        {
+            "id": 2012,
+            "q": "Q12",
+            "title": "힘든 일이 생겼다",
+            "answer1": "힘들어도 혼자서 극복할 수 있다",
+            "answer2": "누군가의 위로가 꼭 필요하다",
+            "answer1_score": "emo11F",
+            "answer2_score": "emo11E"
+        },
+        {
+            "id": 2013,
+            "q": "Q13",
+            "title": "급여와 조건이 같은 두 회사로부터 채용 합격 소식이 들려왔다. 두 회사 중 내 선택은?",
+            "answer1": "30년 역사의 규칙과 전통있는 기업",
+            "answer2": "새로운 지식과 창의성을 요구하는 스타트업",
+            "answer1_score": "open9D",
+            "answer2_score": "open9C"
+        },
+        {
+            "id": 2014,
+            "q": "Q14",
+            "title": "나는 미술관에 주로?",
+            "answer1": "초대권이 있을 때 간다",
+            "answer2": "기꺼이 내 돈 주고 간다",
+            "answer1_score": "open11D",
+            "answer2_score": "open11C"
+        },
+        {
+            "id": 2015,
+            "q": "Q15",
+            "title": "내가 살고 싶은 사회는?",
+            "answer1": "내가 존중받는 사회",
+            "answer2": "모두가 존중 받는 사회",
+            "answer1_score": "hon4H",
+            "answer2_score": "hon4G"
+        },
+        {
+            "id": 2016,
+            "q": "Q16",
+            "title": "식당에서 밥을 먹고 나왔는데, 메뉴 하나가 덜 결제되었다",
+            "answer1": "Lucky! 그냥 집에 간다",
+            "answer2": "다시 돌아가서 말한다",
+            "answer1_score": "hon6H",
+            "answer2_score": "hon6G"
+        },
+        {
+            "id": 2017,
+            "q": "Q17",
+            "title": "이미 어떤 일을 진행하고 있는데, 새로운 일에 대한 제의가 들어왔다",
+            "answer1": "지금 하는 일을 망치면 안된다는 생각에 제의를 거절한다",
+            "answer2": "조금 벅차긴 해도 새로운 일을 통해 배울 것이 있다는 생각에 제의를 수락한다",
+            "answer1_score": "cont1J",
+            "answer2_score": "cont1I"
+        },
+        {
+            "id": 2018,
+            "q": "Q18",
+            "title": "보통 내 행동의 이유는?",
+            "answer1": "해야 하니까",
+            "answer2": "하고 싶으니까",
+            "answer1_score": "cont7J",
+            "answer2_score": "cont7I"
+        },
+        {
+            "id": 2019,
+            "q": "Q19",
+            "title": "내가 독립운동을 했다면?",
+            "answer1": "내 친구들이 다 하니까 했을 것이다",
+            "answer2": "나라를 지켜야 하니까 했을 것이다",
+            "answer1_score": "est8L",
+            "answer2_score": "est8K"
+        },
+        {
+            "id": 2020,
+            "q": "Q20",
+            "title": "친구들과 여행 도중 하루의 자유 시간이 생겼다",
+            "answer1": "꼭 가고 싶었던 곳이 아니더라도 친구들과 함께 간다",
+            "answer2": "혼자서라도 내가 꼭 가고 싶었던 곳에 간다",
+            "answer1_score": "est11L",
+            "answer2_score": "est11K"
+        }
+    ]
 }

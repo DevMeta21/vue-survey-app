@@ -11,21 +11,15 @@
     <span class="user-text-white">만의</span>
   </div> -->
   <div>
-    <span class="user-text-white">INSIDE만의 성향을</span>
+    <span class="user-text-white">{{this.$route.params.title}}!</span>
   </div>
-  <div>
-    <span class="user-text-white">분석하고 있어요!</span>
-  </div>
+  
   <p>
   <span> </span>
   <p>
-    <v-progress-circular
-      :size="50"
-      color="amber"
-      indeterminate
-    ></v-progress-circular>
+ 
   <div class="wait-label-small">
-    잠시만 기다려주세요!!!
+    감사합니다!!!
   </div>
   </div> 
     
@@ -38,34 +32,31 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
   // future
   data () {
       return {
-        "title" : ""
+        personaTitle: '',
+        personaValue: ''
       }
     },
     methods: {
 
     },
-  created : 
+  created() {
+    console.log(this.$route.params.title);
+
+
+  // function() {
     
-  function() {
-    console.log(this.$route.params.totalScore);
-    axios.post('https://23tqd8hnq1.execute-api.ap-northeast-2.amazonaws.com/default/personalityClassify', {
-    "UserID": "TestID",
-    "Code": this.$route.params.totalScore
-}) .then(res => { console.log(res.data)
-this.title =  res.data.ResultDesc[1]});
-    setTimeout(() => { 
-    this.$router.push({name: 'TestResult', params : {"title":this.title}})
+  //   setTimeout(() => {
+  //   //this.$router.push({name: 'TestStart'})
     
-    }, 2000);
-        // });
-      }
+  //   }, 2000);
+  //       // });
+  //     }
   }
-    
+    }
 </script>
 
 

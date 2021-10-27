@@ -23,7 +23,7 @@
     </button>
     <button class="question-button" 
       v-else 
-      @click="$router.push({name: 'TestWait'})">
+      v-on:click="lastPage(productData[productPage].answer1_score)">
       <span class="question-button-label">{{productData[productPage].answer1}}</span>
     </button>
     <button class="question-button" 
@@ -33,7 +33,7 @@
     </button>
     <button class="question-button" 
       v-else 
-      @click="$router.push({name: 'TestWait'})">
+      v-on:click="lastPage(productData[productPage].answer2_score)">
        <span class="question-button-label">{{productData[productPage].answer2}}</span>
     </button>
 
@@ -43,7 +43,7 @@
       color="amber"
     ></v-progress-linear>
     <div class="progress-text">
-      {{productPage+1}}/10
+      {{productPage+1}}/20
     </div>
     
   </div>
@@ -56,17 +56,21 @@
 
 <script>
 // import VueAxios from 'vue-axios';
-// import axios from 'axios';
+
+
 import productData from '../../static/products.json';
+// import { eventBus } from "@/main.js";
+
 // Vue.prototype.$axios = axios;
 export default {
   // future
+
   data () {
       return {
-        valueDeterminate: 10,
+        valueDeterminate: 5,
         productData: '',
         productPage: 0,
-        productPercent: 10,
+        productPercent: 5,
         totalScore: [],
         q: '',
         title: ''
@@ -74,14 +78,14 @@ export default {
     },
   computed: {
     endPageData: function() {
-      return this.productPercent + 10;
+      return this.productPercent + 5;
     }
   },
   methods: {
     nextPage(score) {
       this.totalScore.push(score);
-      console.log(this.totalScore);
-      this.valueDeterminate += 10;
+      
+      this.valueDeterminate += 5;
       this.productPage += 1;
       if (this.productPage > this.productData.length+1) {
         this.q = '';
@@ -91,6 +95,7 @@ export default {
         this.q = this.productData[this.productPage].q;
         this.title = this.productData[this.productPage].title;
       }
+      
     },
     endPage() {
       if (this.productPage > this.productData.length-2) {
@@ -99,7 +104,15 @@ export default {
       else {
         return true;
       }
-    }
+    },
+    lastPage(score) {
+      this.totalScore.push(score);
+      //console.log(this.totalScore);
+      // eventBus.$emit('sendFinalData', this.totalScore);
+      this.$router.push({name: 'TestWait', params: {"totalScore":this.totalScore}})
+
+      
+    },
   },
   created: function() {
     this.productData = productData.products;

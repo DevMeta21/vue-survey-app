@@ -32,7 +32,8 @@ body {
   // padding: 10px 10px 10px 10px;
   margin: 0;
   display: block;
-  background-color: #ffdc00;
+  //background-color: #ffdc00;
+  background-image: linear-gradient( rgb(207,231,252), rgb(221,176,253));
 }
 .root {
     display: flex;
@@ -41,7 +42,7 @@ body {
     // max-width: 600px;
     padding: 0;
     margin: 0;
-    background-color: #ffdc00;
+
 }
 .main {
   align-items: center;
@@ -52,6 +53,7 @@ body {
   // padding: 0 16px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 
 .MBTI-1 {
@@ -62,7 +64,7 @@ body {
   width: 100%;
   margin: auto;
   align-items: center;
-  background-color: #ffdc00;
+  
 }
 
 .layer {
@@ -75,6 +77,7 @@ body {
   max-width: 700px;
   border: 0;
   vertical-align: top;
+ 
 }
 
 .start-button {
