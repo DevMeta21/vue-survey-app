@@ -144,7 +144,7 @@ export default {
     // margin: 0 59px 214px;
     //margin: 0 32.3px 18px 40px;
     object-fit: contain;
-    background: url("../../static/images/page01.png");
+    background: url("../../static/images/page02.png");
     background-size: cover;
     background-position: center;
 }

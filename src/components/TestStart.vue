@@ -4,7 +4,7 @@
   <div class="MBTI-1">
     <div class="col-md-5 col-md-offset-0">
         <figure>
-          <img class="layer" src="../../static/images/page01.png">
+          <img class="layer" src="../../static/images/page02.png">
         </figure>
       </div>
     <div class="start-label-big">당신의 성향을 알아볼까요?</div>
