@@ -43,7 +43,9 @@ export default {
   // future
   data () {
       return {
-        "title" : ""
+        "title" : "",
+        "simple_code" : "",
+        "dptoken":""
       }
     },
     methods: {
@@ -53,13 +55,26 @@ export default {
     
   function() {
     console.log(this.$route.params.totalScore);
+
+    if (this.$cookies.get("dptoken")) {
+      this.dptoken = this.$cookies.get("dptoken");
+      console.log("get")
+      console.log(this.dptoken)
+    } else {
+      this.dptoken = Math.random().toString(36).substr(2,11);
+      console.log("get")
+      this.$cookies.set("dptoken", this.dptoken);
+      console.log(this.dptoken)
+    }
+
     axios.post('https://23tqd8hnq1.execute-api.ap-northeast-2.amazonaws.com/default/personalityClassify', {
-    "UserID": "TestID",
+    "UserID": this.dptoken,
     "Code": this.$route.params.totalScore
 }) .then(res => { console.log(res.data)
-this.title =  res.data.ResultDesc[1]});
+this.title =  res.data.ResultDesc[1]
+this.simple_code = res.data.ResultDesc[2]});
     setTimeout(() => { 
-    this.$router.push({name: 'TestResult', params : {"title":this.title}})
+    this.$router.push({name: 'TestResult', params : {"title":this.title, "simple_code": this.simple_code}})
     
     }, 2000);
         // });

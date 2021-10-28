@@ -1,7 +1,7 @@
 <template>
 <v-app>
   <div class="root2">
-  <main class="main">
+  <!-- <main class="main"> -->
   <div class="MBTI-2">
     <!-- <div class="col-md-5 col-md-offset-0"> -->
         <!-- <figure>
@@ -47,7 +47,7 @@
     </div>
     
   </div>
-  </main>
+  <!-- </main> -->
   </div>
 </v-app>
 
@@ -133,7 +133,7 @@ export default {
     // padding: 10px 10px 10px 10px;
     position: relative;
     // max-width: 600px;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     background-color: #252525;
 }
@@ -142,7 +142,7 @@ export default {
     width: 176px;
     height: 176px;
     // margin: 0 59px 214px;
-    margin: 0 32.3px 18px 40px;
+    //margin: 0 32.3px 18px 40px;
     object-fit: contain;
     background: url("../../static/images/page01.png");
     background-size: cover;
@@ -168,7 +168,7 @@ export default {
 .MBTI-2 {
   // width: 375px;
   // height: 812px;
-  padding: 121px 30px;
+  padding: 50px 30px 150px 30px;
   max-width: 600px; 
   display: flex;
   flex-direction: column;

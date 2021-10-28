@@ -11,14 +11,36 @@
     <span class="user-text-white">만의</span>
   </div> -->
   <div>
-    <span class="user-text-white">{{this.$route.params.title}}!</span>
+    <span class="user-text">{{this.$route.params.title}}!</span>
   </div>
   
   <p>
   <span> </span>
   <p>
- 
+
+  <div class="col-md-5 col-md-offset-0">
+      <figure>
+        <img class="layer" :src='`https://insidepersonalimages.s3.ap-northeast-2.amazonaws.com/${imgSrc}.png`'>
+      </figure>
+    </div>
+
   <div class="wait-label-small">
+    {{ storyData[this.$route.params.simple_code]["text"][0] }}
+  </div>
+
+  <div class="wait-label-small">
+    {{ storyData[this.$route.params.simple_code]["text"][1] }}
+  </div>
+
+  <div class="wait-label-small">
+    {{ storyData[this.$route.params.simple_code]["text"][2] }}
+  </div>
+
+  <div class="wait-label-small">
+    {{ storyData[this.$route.params.simple_code]["text"][3] }}
+  </div>
+
+   <div class="wait-label-small">
     감사합니다!!!
   </div>
   </div> 
@@ -32,12 +54,14 @@
 </template>
 
 <script>
+import storyData from '../../static/story.json';
+
 export default {
   // future
   data () {
       return {
-        personaTitle: '',
-        personaValue: ''
+        imgSrc: '',
+        storyData: ''
       }
     },
     methods: {
@@ -45,6 +69,8 @@ export default {
     },
   created() {
     console.log(this.$route.params.title);
+    this.storyData = storyData;
+    this.imgSrc = this.$route.params.simple_code
 
 
   // function() {
@@ -64,11 +90,24 @@ export default {
 .v-progress-circular {
   margin: 1rem;
 }
+.layer {
+  /* width: 254.7px;
+  height: 241px; */
+  margin: 0px auto;
+  object-fit: cover;
+  display: block;
+  // width: 100%;
+  max-width: 300px;
+  border: 0;
+  vertical-align: top;
+  text-align: center;
+ 
+}
 .wait-label-small {
   // width: 136px;
   // height: 32px;
-  margin: 150px 52px 0 54px;
-  opacity: 0.5;
+  margin: 30px 20px 0 20px;
+  opacity: 0.8;
   font-family: CookieRun-Regular;
   font-size: 16px;
   font-weight: normal;
