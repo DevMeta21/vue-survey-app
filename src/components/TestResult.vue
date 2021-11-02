@@ -82,7 +82,7 @@
             </v-btn>
           </div>
    <div class="wait-label-small">
-    감사합니다!!!
+    {{ this.thanks }}
   </div>
   </div> 
     
@@ -94,7 +94,7 @@
 
 </template>
 
-<script>
+<script >
 import axios from 'axios';
 import storyData from '../../static/story.json';
 
@@ -108,6 +108,7 @@ export default {
         NickName:'',
         Opinion:'',
         dptoken: '',
+        thanks: '감사합니다!!',
         rules: [
         value => !!value || 'Required.',
         value => (value && value.length >= 3) || 'Min 3 characters',
@@ -129,6 +130,7 @@ export default {
       },
       opinionSave() {
       console.log(this.Opinion, this.NickName);
+      this.thanks = "소중한 의견 저장되었습니다.";
       axios.post('https://23tqd8hnq1.execute-api.ap-northeast-2.amazonaws.com/default/personalityUpdate', {
     "user_id": this.dptoken,
     "feedback": this.rating,
