@@ -74,7 +74,7 @@ export default {
 this.title =  res.data.ResultDesc[1]
 this.simple_code = res.data.ResultDesc[2]});
     setTimeout(() => { 
-    this.$router.push({name: 'TestResult', params : {"title":this.title, "simple_code": this.simple_code}})
+    this.$router.push({name: 'TestResult', params : {"title":this.title, "simple_code": this.simple_code, "dptoken": this.dptoken}})
     
     }, 2000);
         // });
